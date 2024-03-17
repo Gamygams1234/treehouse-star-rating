@@ -8,7 +8,12 @@ const StarRating = () => {
   // Write a function that returns 5 Star components
 
   const selectRating = (event, rating) => {
-    setCourseRating(rating);
+    if (rating === courseRating){
+        setCourseRating(0);
+    }else{
+        setCourseRating(rating);
+    }
+   
   };
 
   const renderStars = () => {
